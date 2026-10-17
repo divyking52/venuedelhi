@@ -9,3 +9,6 @@ clean-assets.js
 build-site.js
 fix-build.js
 extract-assets.js
+
+.vercel
+.env*
