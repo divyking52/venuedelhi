@@ -841,21 +841,71 @@ button,input,select,textarea{font:inherit}
   .filter-dock.floating h3{display:block;font-size:0.85rem;margin-bottom:6px}
   .filter-dock.floating .filter-row{flex-direction:column}
 
-  /* Areas depth stack */
-  .areas-stack-pin{height:240vh}
-  .areas-stack-sticky{padding:calc(var(--header-h) + 8px) 0 16px}
-  .areas-header{margin-bottom:6px;gap:8px}
+  /* Areas — mobile horizontal snap carousel (3D sticky stack breaks on iOS) */
+  .areas-section{padding:28px 0 40px}
+  .areas-stack-pin{height:auto!important;position:relative}
+  .areas-stack-sticky{
+    position:relative!important;top:auto!important;height:auto!important;
+    padding:0;overflow:visible;display:block;
+  }
+  .areas-header{
+    width:min(1240px,92vw);margin:0 auto 16px;gap:8px;padding:0;
+  }
   .areas-header .section-title{font-size:clamp(1.35rem,6vw,1.85rem);max-width:100%}
   .areas-header-meta{display:none}
-  .stack-stage{width:min(92vw,420px)}
-  .area-card{height:min(46svh,360px)}
+  .stack-stage{
+    display:flex!important;
+    flex-direction:row;
+    gap:14px;
+    width:100%!important;
+    max-width:none;
+    margin:0;
+    padding:8px 5vw 20px;
+    overflow-x:auto;
+    overflow-y:visible;
+    -webkit-overflow-scrolling:touch;
+    scroll-snap-type:x mandatory;
+    scroll-padding-inline:5vw;
+    perspective:none!important;
+    transform:none!important;
+    flex:none;
+    scrollbar-width:none;
+  }
+  .stack-stage::-webkit-scrollbar{display:none}
+  .area-card,
+  .area-card:nth-child(n),
+  .area-card:nth-child(n+2),
+  .area-card:nth-child(n+5){
+    position:relative!important;
+    inset:auto!important;
+    left:auto!important;right:auto!important;top:auto!important;
+    flex:0 0 min(82vw,340px);
+    width:min(82vw,340px)!important;
+    height:min(58vw,280px)!important;
+    margin:0!important;
+    opacity:1!important;
+    transform:none!important;
+    filter:none!important;
+    z-index:1!important;
+    pointer-events:auto!important;
+    scroll-snap-align:center;
+    will-change:auto;
+  }
+  .area-card-inner{
+    height:100%;
+    border-radius:16px;
+    box-shadow:0 16px 40px rgba(0,0,0,0.35);
+  }
   .area-card-body{padding:48px 16px 16px}
   .area-card-body h2{font-size:1.15rem}
   .area-card-body span{font-size:0.6rem}
-  .stack-ui{width:min(92vw,420px);gap:10px;margin-top:4px}
+  .stack-ui{
+    width:min(1240px,92vw);margin:4px auto 0;gap:10px;padding:0;
+  }
   .stack-counter{font-size:0.95rem;min-width:58px}
   .stack-counter em{font-size:1.15rem}
-  .stack-hint{display:none}
+  .stack-hint{display:inline;font-size:0.62rem;letter-spacing:0.08em}
+  .stack-hint::before{content:'Swipe → '}
 
   /* Allied */
   .section{padding:64px 0}
@@ -1121,7 +1171,7 @@ button,input,select,textarea{font:inherit}
       <span class="section-label">Explore Delhi NCR</span>
       <h2 class="section-title"><a href="https://www.venueindelhi.com/delhi">Popular Areas of Wedding Venues In Delhi NCR</a></h2>
     </div>
-    <p class="areas-header-meta">Scroll to flip through 15 venue pockets — stacked in depth.</p>
+    <p class="areas-header-meta">Scroll or swipe through 15 venue pockets across Delhi NCR.</p>
   </div>
   <div class="stack-stage" id="areasTrack">
 <a class="area-card magnetic" href="https://venueindelhi.com/wedding-venues-in-delhi/best-5-star-banquet-halls-in-delhi-ncr/">
@@ -1869,62 +1919,77 @@ button,input,select,textarea{font:inherit}
       });
     });
 
-    /* ---- Depth stack scroll carousel ---- */
-    (function initDepthStack(){
+    /* ---- Areas: depth stack (desktop) / snap carousel (mobile) ---- */
+    (function initAreasCarousel(){
+      const stage = document.getElementById('areasTrack');
       const cards = gsap.utils.toArray('#areasTrack .area-card');
       const n = cards.length;
-      if(!n) return;
+      if(!n || !stage) return;
       const counter = document.getElementById('stackCurrent');
       const bar = document.getElementById('stackBarFill');
-
-      gsap.set(cards, { yPercent: -50, top: '50%', left: 0, x: 0 });
-      const place = (progress)=>{
-        const raw = progress * (n - 1);
-        const active = Math.round(raw);
-        cards.forEach((card, i)=>{
-          const d = i - raw;
-          let y, z, scale, rotX, opacity, blur, zIndex;
-          if(d < -0.02){
-            const t = gsap.utils.clamp(0, 1, -d);
-            y = -t * 160;
-            z = 100 + t * 140;
-            scale = 1 + t * 0.06;
-            rotX = -t * 32;
-            opacity = 1 - t * 1.15;
-            blur = t * 8;
-            zIndex = 200 + i;
-          } else {
-            const depth = gsap.utils.clamp(0, 5, d);
-            y = depth * 22;
-            z = -depth * 110;
-            scale = 1 - depth * 0.075;
-            rotX = depth * 5;
-            opacity = depth > 4.2 ? 0 : 1 - depth * 0.1;
-            blur = depth > 2.5 ? (depth - 2.5) * 2.5 : 0;
-            zIndex = 100 - Math.round(depth * 8);
-          }
-          card.classList.toggle('is-active', i === active);
-          gsap.set(card, {
-            y, z, scale, rotationX: rotX,
-            yPercent: -50,
-            opacity: Math.max(0, Math.min(1, opacity)),
-            filter: blur > 0.15 ? 'blur('+blur.toFixed(1)+'px)' : 'blur(0px)',
-            zIndex,
-            force3D: true,
-            transformPerspective: 1200
-          });
-        });
-        if(counter) counter.textContent = String(active + 1).padStart(2, '0');
-        if(bar) gsap.set(bar, { width: (progress * 100) + '%' });
+      const setUI = (i)=>{
+        if(counter) counter.textContent = String(i + 1).padStart(2, '0');
+        if(bar) gsap.set(bar, { width: ((i / Math.max(n - 1, 1)) * 100) + '%' });
+        cards.forEach((c, idx)=> c.classList.toggle('is-active', idx === i));
       };
 
-      place(0);
-      ScrollTrigger.create({
-        trigger: '.areas-stack-pin',
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: 0.65,
-        onUpdate: (self) => place(self.progress)
+      mm.add('(min-width: 981px)', ()=>{
+        gsap.set(cards, { yPercent: -50, top: '50%', left: 0, x: 0, clearProps: 'filter' });
+        const place = (progress)=>{
+          const raw = progress * (n - 1);
+          const active = Math.round(raw);
+          cards.forEach((card, i)=>{
+            const d = i - raw;
+            let y, z, scale, rotX, opacity, blur, zIndex;
+            if(d < -0.02){
+              const t = gsap.utils.clamp(0, 1, -d);
+              y = -t * 160; z = 100 + t * 140; scale = 1 + t * 0.06;
+              rotX = -t * 32; opacity = 1 - t * 1.15; blur = t * 8; zIndex = 200 + i;
+            } else {
+              const depth = gsap.utils.clamp(0, 5, d);
+              y = depth * 22; z = -depth * 110; scale = 1 - depth * 0.075;
+              rotX = depth * 5; opacity = depth > 4.2 ? 0 : 1 - depth * 0.1;
+              blur = depth > 2.5 ? (depth - 2.5) * 2.5 : 0;
+              zIndex = 100 - Math.round(depth * 8);
+            }
+            gsap.set(card, {
+              y, z, scale, rotationX: rotX, yPercent: -50,
+              opacity: Math.max(0, Math.min(1, opacity)),
+              filter: blur > 0.15 ? 'blur('+blur.toFixed(1)+'px)' : 'blur(0px)',
+              zIndex, force3D: true, transformPerspective: 1200
+            });
+          });
+          setUI(active);
+        };
+        place(0);
+        ScrollTrigger.create({
+          trigger: '.areas-stack-pin',
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: 0.65,
+          onUpdate: (self) => place(self.progress)
+        });
+        return ()=>{
+          gsap.set(cards, { clearProps: 'all' });
+        };
+      });
+
+      mm.add('(max-width: 980px)', ()=>{
+        gsap.set(cards, { clearProps: 'transform,opacity,filter,zIndex,top,left,x,y,z,scale,rotationX,yPercent' });
+        setUI(0);
+        const onScroll = ()=>{
+          const stageLeft = stage.getBoundingClientRect().left;
+          let best = 0, bestDist = Infinity;
+          cards.forEach((card, i)=>{
+            const r = card.getBoundingClientRect();
+            const dist = Math.abs((r.left + r.width / 2) - (stageLeft + stage.clientWidth / 2));
+            if(dist < bestDist){ bestDist = dist; best = i; }
+          });
+          setUI(best);
+        };
+        stage.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+        return ()=> stage.removeEventListener('scroll', onScroll);
       });
     })();
 
