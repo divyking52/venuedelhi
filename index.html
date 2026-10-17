@@ -1,0 +1,1866 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VenueInDelhi - Hassle Free Wedding Planner in Delhi, Wedding Venue in Delhi - Venue In Delhi</title>
+<meta name="description" content="Wedding venues in GT Karnal Road | Wedding Venues in Chattarpur | Wedding Venue in Delhi | Wedding Venues in Gurgaon | Wedding Venues">
+<link rel="canonical" href="https://venueindelhi.com/">
+<link rel="icon" href="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<style>
+:root {
+  --crimson: #B81D33;
+  --crimson-deep: #8B1122;
+  --maroon: #4A0812;
+  --gold: #D4AF37;
+  --champagne: #F3E5AB;
+  --ivory: #FFFDF9;
+  --cream: #FAF3E8;
+  --charcoal: #1E1B18;
+  --glass: rgba(255,253,249,0.82);
+  --font-display: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --ease-lux: cubic-bezier(0.22, 1, 0.36, 1);
+  --header-h: 72px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:auto}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
+.lenis.lenis-stopped{overflow:hidden}
+body{
+  font-family:var(--font-body);
+  color:var(--charcoal);
+  background:var(--ivory);
+  overflow-x:hidden;
+  cursor:none;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+body.touch-device{cursor:auto}
+body.touch-device .cursor{display:none!important}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block;height:auto}
+ul{list-style:none}
+button,input,select,textarea{font:inherit}
+.container{width:min(1240px,92vw);margin:0 auto}
+.magnetic{display:inline-flex}
+
+/* PRELOADER */
+.preloader{
+  position:fixed;inset:0;z-index:10000;
+  background:linear-gradient(145deg,var(--maroon) 0%,var(--crimson-deep) 45%,#2a060c 100%);
+  display:flex;align-items:center;justify-content:center;flex-direction:column;
+  color:var(--champagne);
+}
+.preloader-logo{width:140px;margin-bottom:28px;filter:brightness(1.15)}
+.preloader-ornament{
+  width:80px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  margin-bottom:20px;
+}
+.preloader-text{
+  font-family:var(--font-display);font-size:clamp(1.4rem,3vw,2rem);
+  letter-spacing:0.08em;font-weight:500;
+}
+.preloader-bar{
+  width:180px;height:2px;background:rgba(243,229,171,0.2);margin-top:28px;overflow:hidden;border-radius:2px;
+}
+.preloader-bar span{
+  display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--champagne));
+}
+.curtain-left,.curtain-right{
+  position:fixed;top:0;width:50%;height:100%;z-index:9999;
+  background:var(--maroon);pointer-events:none;
+}
+.curtain-left{left:0}
+.curtain-right{right:0}
+
+/* CURSOR */
+.cursor{
+  position:fixed;top:0;left:0;width:40px;height:40px;
+  border:1.5px solid var(--gold);border-radius:50%;
+  pointer-events:none;z-index:9998;
+  transition:background .35s,border-color .35s,mix-blend-mode .2s;
+  mix-blend-mode:difference;
+}
+.cursor-dot{
+  position:fixed;top:0;left:0;width:8px;height:8px;
+  background:var(--crimson);border-radius:50%;
+  pointer-events:none;z-index:9999;
+  transition:background .3s;
+}
+.cursor.hover{
+  background:rgba(212,175,55,0.15);
+  border-color:var(--champagne);
+  mix-blend-mode:normal;
+}
+.cursor-dot.hover{background:var(--gold)}
+
+/* UTILITY BAR */
+.utility-bar{
+  background:linear-gradient(90deg,var(--maroon),var(--crimson-deep) 50%,var(--maroon));
+  color:var(--champagne);
+  font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;
+  padding:8px 0;position:relative;z-index:200;
+}
+.utility-inner{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 28px;
+  width:min(1240px,94vw);margin:0 auto;
+}
+.utility-bar a{color:var(--champagne);transition:color .25s}
+.utility-bar a:hover{color:#fff}
+.utility-sep{opacity:0.35}
+.utility-hotline{font-weight:600;color:#fff}
+
+/* NAV */
+.site-header{
+  position:sticky;top:0;z-index:500;
+  background:var(--glass);
+  backdrop-filter:blur(18px) saturate(1.2);
+  -webkit-backdrop-filter:blur(18px) saturate(1.2);
+  border-bottom:1px solid rgba(212,175,55,0.25);
+  box-shadow:0 4px 30px rgba(74,8,18,0.06);
+}
+.nav-row{
+  display:flex;align-items:center;justify-content:space-between;
+  height:var(--header-h);gap:20px;
+  width:min(1240px,94vw);margin:0 auto;
+}
+.logo img{height:52px;width:auto}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-item{position:relative}
+.nav-link{
+  display:flex;align-items:center;gap:6px;
+  padding:10px 14px;font-size:0.82rem;font-weight:550;letter-spacing:0.02em;
+  color:var(--charcoal);border-radius:6px;transition:color .25s,background .25s;
+}
+.nav-link:hover,.nav-item:hover > .nav-link{color:var(--crimson);background:rgba(184,29,51,0.06)}
+.nav-link .chev{font-size:0.65rem;opacity:0.6;transition:transform .3s}
+.nav-item:hover .chev{transform:rotate(180deg)}
+.mega{
+  position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%) translateY(8px);
+  min-width:520px;padding:22px;
+  background:rgba(255,253,249,0.97);
+  border:1px solid rgba(212,175,55,0.35);
+  box-shadow:0 24px 60px rgba(74,8,18,0.12);
+  border-radius:12px;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .35s var(--ease-lux),transform .35s var(--ease-lux),visibility .35s;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:6px 16px;
+}
+.mega.mega-wide{min-width:680px;grid-template-columns:repeat(4,1fr)}
+.mega.mega-narrow{min-width:280px;grid-template-columns:1fr}
+.nav-item:hover .mega{
+  opacity:1;visibility:visible;pointer-events:auto;transform:translateX(-50%) translateY(0);
+}
+.mega a{
+  padding:8px 10px;font-size:0.78rem;border-radius:6px;
+  color:var(--charcoal);transition:background .2s,color .2s,transform .2s;
+}
+.mega a:hover{background:rgba(184,29,51,0.08);color:var(--crimson);transform:translateX(3px)}
+.nav-cta{
+  background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));
+  color:#fff!important;padding:10px 20px!important;border-radius:999px!important;
+  box-shadow:0 6px 20px rgba(184,29,51,0.3);
+}
+.nav-cta:hover{filter:brightness(1.08)}
+.menu-toggle{
+  display:none;flex-direction:column;gap:5px;background:none;border:none;padding:8px;cursor:none;
+}
+.menu-toggle span{display:block;width:22px;height:2px;background:var(--maroon)}
+
+/* HERO */
+.hero-pin-wrap{position:relative;height:170vh}
+.hero{
+  position:sticky;top:0;height:100vh;overflow:hidden;
+  background:radial-gradient(ellipse at 30% 20%,#3a0a14 0%,var(--maroon) 40%,#1a0408 100%);
+}
+.hero-patterns{
+  position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;
+}
+.hero-patterns .jali{
+  position:absolute;inset:0;
+  opacity:0.14;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23D4AF37' stroke-width='1'%3E%3Cpath d='M40 0 L80 40 L40 80 L0 40 Z'/%3E%3Cpath d='M40 12 L68 40 L40 68 L12 40 Z'/%3E%3Ccircle cx='40' cy='40' r='6'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:80px 80px;
+  animation:jaliDrift 40s linear infinite;
+}
+.hero-patterns .paisley{
+  position:absolute;width:min(42vw,420px);height:min(42vw,420px);
+  opacity:0.18;color:#D4AF37;
+}
+.hero-patterns .paisley svg{width:100%;height:100%}
+.hero-patterns .paisley-tl{top:-6%;left:-4%;animation:ornamentFloat 18s ease-in-out infinite}
+.hero-patterns .paisley-br{bottom:-8%;right:-5%;transform:rotate(180deg);animation:ornamentFloat 22s ease-in-out infinite reverse}
+.hero-patterns .mandala{
+  position:absolute;width:min(55vw,560px);height:min(55vw,560px);
+  opacity:0.12;color:#F3E5AB;
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  animation:mandalaSpin 80s linear infinite;
+}
+.hero-patterns .mandala svg{width:100%;height:100%}
+.hero-patterns .corner{
+  position:absolute;width:120px;height:120px;opacity:0.35;color:#D4AF37;
+}
+.hero-patterns .corner svg{width:100%;height:100%}
+.hero-patterns .c-tl{top:18px;left:18px}
+.hero-patterns .c-tr{top:18px;right:18px;transform:scaleX(-1)}
+.hero-patterns .c-bl{bottom:18px;left:18px;transform:scaleY(-1)}
+.hero-patterns .c-br{bottom:18px;right:18px;transform:scale(-1)}
+.hero-patterns .vine{
+  position:absolute;width:2px;height:45%;opacity:0.25;
+  background:linear-gradient(180deg,transparent,var(--gold),transparent);
+}
+.hero-patterns .vine-l{left:7%;top:20%}
+.hero-patterns .vine-r{right:7%;top:20%}
+@keyframes jaliDrift{to{background-position:80px 80px}}
+@keyframes mandalaSpin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes ornamentFloat{
+  0%,100%{transform:translateY(0) rotate(0deg)}
+  50%{transform:translateY(-18px) rotate(4deg)}
+}
+.hero-patterns .paisley-br{animation-name:ornamentFloatBr}
+@keyframes ornamentFloatBr{
+  0%,100%{transform:rotate(180deg) translateY(0)}
+  50%{transform:rotate(184deg) translateY(-14px)}
+}
+.hero-mask{
+  position:absolute;left:50%;top:46%;
+  width:min(68vw,920px);
+  height:min(58vh,520px);
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  overflow:hidden;z-index:2;
+  clip-path:ellipse(50% 48% at 50% 50%);
+  box-shadow:
+    0 0 0 3px var(--gold),
+    0 0 0 10px rgba(74,8,18,0.65),
+    0 30px 70px rgba(0,0,0,0.5);
+  will-change:width,height,clip-path;
+}
+.hero-mask.is-expanding{
+  box-shadow:none;
+}
+.hero-mask::after{
+  content:'';position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(26,4,8,0.45) 0%,rgba(26,4,8,0.2) 40%,rgba(26,4,8,0.55) 100%);
+  pointer-events:none;z-index:2;
+}
+.hero-slides{position:absolute;inset:0}
+.hero-slide{
+  position:absolute;inset:0;opacity:0;
+  animation:heroFade 25s infinite;
+  will-change:opacity,transform;
+}
+.hero-slide img{
+  width:100%;height:100%;object-fit:cover;object-position:center 30%;
+  transform:scale(1.06);display:block;
+}
+.hero-slide:nth-child(1){animation-delay:0s}
+.hero-slide:nth-child(2){animation-delay:5s}
+.hero-slide:nth-child(3){animation-delay:10s}
+.hero-slide:nth-child(4){animation-delay:15s}
+.hero-slide:nth-child(5){animation-delay:20s}
+@keyframes heroFade{
+  0%,18%{opacity:1;transform:scale(1.06)}
+  22%,100%{opacity:0;transform:scale(1.08)}
+}
+.hero-content{
+  position:absolute;inset:0;z-index:5;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  pointer-events:none;padding:0 4vw;
+}
+.hero-brand{
+  font-family:var(--font-display);font-size:clamp(2.8rem,8vw,6.5rem);
+  font-weight:600;color:#fff;letter-spacing:0.02em;
+  text-shadow:0 2px 24px rgba(0,0,0,0.75),0 0 60px rgba(0,0,0,0.4);
+  display:flex;gap:0.35em;justify-content:center;flex-wrap:wrap;
+  margin-bottom:14px;
+}
+.hero-brand .left-word,.hero-brand .right-word{display:inline-block;will-change:transform}
+.hero-sub{
+  font-size:clamp(0.9rem,1.5vw,1.1rem);color:#fff;
+  max-width:540px;text-align:center;font-weight:400;letter-spacing:0.03em;
+  line-height:1.55;margin-bottom:20px;padding:10px 18px;border-radius:8px;
+  background:rgba(26,4,8,0.45);
+  backdrop-filter:blur(6px);
+  text-shadow:0 1px 12px rgba(0,0,0,0.6);
+  border:1px solid rgba(212,175,55,0.25);
+}
+.hero-scroll-hint{
+  position:absolute;bottom:22%;left:50%;transform:translateX(-50%);
+  color:#fff;font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;
+  display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0.85;
+  text-shadow:0 1px 10px rgba(0,0,0,0.7);
+}
+.hero-scroll-hint .line{
+  width:1px;height:36px;background:linear-gradient(#fff,transparent);
+  animation:scrollPulse 1.8s ease-in-out infinite;
+}
+@keyframes scrollPulse{0%,100%{transform:scaleY(0.6);opacity:0.4}50%{transform:scaleY(1);opacity:1}}
+
+/* FILTER DOCK */
+.filter-dock{
+  position:absolute;bottom:6%;left:50%;transform:translateX(-50%);
+  z-index:20;pointer-events:auto;width:min(720px,90vw);
+  background:rgba(255,253,249,0.92);
+  backdrop-filter:blur(16px);
+  border:1px solid rgba(212,175,55,0.4);
+  border-radius:16px;padding:18px 22px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.25);
+  transition:border-radius .4s,box-shadow .4s;
+}
+.filter-dock.floating{
+  position:fixed;bottom:24px;left:50%;
+  border-radius:999px;padding:12px 20px;
+  box-shadow:0 12px 40px rgba(74,8,18,0.2);
+}
+.filter-dock h3{
+  font-family:var(--font-display);font-size:1.15rem;color:var(--maroon);
+  margin-bottom:12px;text-align:center;font-weight:600;
+}
+.filter-dock.floating h3{display:none}
+.filter-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:center}
+.filter-row select,.filter-row input{
+  flex:1;min-width:120px;padding:11px 14px;
+  border:1px solid rgba(212,175,55,0.4);border-radius:8px;
+  background:var(--ivory);color:var(--charcoal);outline:none;
+}
+.filter-dock.floating .filter-row select,.filter-dock.floating .filter-row input{border-radius:999px;padding:10px 16px}
+.filter-btn{
+  padding:11px 24px;border:none;border-radius:8px;cursor:none;
+  background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));
+  color:#fff;font-weight:600;white-space:nowrap;
+  box-shadow:0 6px 18px rgba(184,29,51,0.3);
+  transition:transform .25s,filter .25s;
+}
+.filter-dock.floating .filter-btn{border-radius:999px}
+.filter-btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+
+/* SECTIONS COMMON */
+.section{padding:100px 0;position:relative}
+.section-label{
+  display:inline-block;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--gold);font-weight:600;margin-bottom:12px;
+}
+.section-title{
+  font-family:var(--font-display);font-size:clamp(2rem,4.5vw,3.4rem);
+  color:var(--maroon);font-weight:600;line-height:1.15;margin-bottom:16px;
+}
+.section-title a{transition:color .25s}
+.section-title a:hover{color:var(--crimson)}
+.section-lead{max-width:560px;color:rgba(30,27,24,0.72);font-size:1.02rem}
+
+/* EXPLORE DELHI NCR — depth stack scroll carousel */
+.areas-section{
+  position:relative;
+  background:
+    radial-gradient(ellipse at 50% 30%,rgba(184,29,51,0.08),transparent 55%),
+    linear-gradient(180deg,#1a0408 0%,var(--maroon) 45%,#2a060c 100%);
+}
+.areas-stack-pin{
+  height:320vh; /* compact: ~13vh per card of scroll feel via sticky */
+  position:relative;
+}
+.areas-stack-sticky{
+  position:sticky;top:0;height:100vh;
+  display:flex;flex-direction:column;
+  padding:calc(var(--header-h) + 20px) 0 28px;
+  overflow:hidden;
+}
+.areas-header{
+  width:min(1100px,92vw);margin:0 auto 12px;
+  display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:12px 28px;
+  z-index:5;position:relative;
+}
+.areas-header .section-label{color:var(--gold)}
+.areas-header .section-title{
+  margin-bottom:0;max-width:18ch;color:var(--ivory);font-size:clamp(1.7rem,3.5vw,2.6rem);
+}
+.areas-header .section-title a{color:inherit}
+.areas-header .section-title a:hover{color:var(--champagne)}
+.areas-header-meta{
+  font-size:0.85rem;color:rgba(255,253,249,0.55);max-width:260px;line-height:1.5;
+}
+.stack-stage{
+  flex:1;position:relative;
+  width:min(720px,90vw);margin:0 auto;
+  perspective:1200px;perspective-origin:50% 45%;
+  transform-style:preserve-3d;
+}
+.area-card{
+  position:absolute;left:0;right:0;
+  width:100%;height:min(58vh,480px);margin:auto;
+  top:50%;transform:translateY(-50%);
+  transform-style:preserve-3d;
+  transform-origin:center center;
+  will-change:transform,opacity,filter;
+  pointer-events:none;
+  backface-visibility:hidden;
+}
+.area-card.is-active{pointer-events:auto}
+/* pre-JS fallback stack peek */
+.area-card:nth-child(1){z-index:15}
+.area-card:nth-child(n+2){opacity:0.55;transform:translateY(calc(-50% + 14px)) scale(0.94);z-index:1}
+.area-card:nth-child(n+5){opacity:0;pointer-events:none}
+.area-card-inner{
+  position:relative;width:100%;height:100%;
+  border-radius:20px;overflow:hidden;
+  background:var(--maroon);
+  border:1.5px solid rgba(212,175,55,0.45);
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.45),
+    0 0 0 1px rgba(212,175,55,0.15),
+    inset 0 0 40px rgba(0,0,0,0.2);
+}
+.area-card-media{
+  position:absolute;inset:0;z-index:1;
+}
+.area-card-media img{
+  width:100%;height:100%;object-fit:cover;
+  filter:saturate(1.05) brightness(0.88);
+}
+.area-badge{
+  position:absolute;top:18px;left:0;z-index:3;
+  background:linear-gradient(135deg,var(--crimson),var(--gold));
+  color:#fff;font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  padding:8px 16px;border-radius:0 999px 999px 0;
+}
+.area-card-body{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;
+  padding:70px 28px 28px;
+  background:linear-gradient(transparent,rgba(16,2,5,0.92) 50%);
+}
+.area-card-body h2{
+  font-family:var(--font-display);font-size:clamp(1.4rem,3vw,2.1rem);color:#fff;
+  font-weight:600;line-height:1.2;
+}
+.area-card-body span{
+  display:inline-block;margin-top:8px;font-size:0.72rem;color:var(--gold);
+  letter-spacing:0.12em;text-transform:uppercase;font-weight:600;
+}
+.stack-ui{
+  width:min(720px,90vw);margin:8px auto 0;
+  display:flex;align-items:center;gap:16px;z-index:5;position:relative;
+}
+.stack-counter{
+  font-family:var(--font-display);font-size:1.1rem;color:var(--champagne);
+  white-space:nowrap;min-width:72px;
+}
+.stack-counter em{font-style:normal;color:#fff;font-size:1.35rem}
+.stack-bar{
+  flex:1;height:2px;background:rgba(243,229,171,0.2);border-radius:2px;overflow:hidden;
+}
+.stack-bar-fill{
+  height:100%;width:0%;
+  background:linear-gradient(90deg,var(--gold),var(--crimson));
+  border-radius:2px;
+}
+.stack-hint{
+  font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;
+  color:rgba(243,229,171,0.55);white-space:nowrap;
+}
+
+/* ALLIED SERVICES */
+.allied-section{
+  background:
+    radial-gradient(ellipse at 10% 0%,rgba(184,29,51,0.06),transparent 50%),
+    radial-gradient(ellipse at 90% 100%,rgba(212,175,55,0.08),transparent 45%),
+    var(--ivory);
+}
+.allied-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:16px;margin-top:48px;
+}
+.allied-card{
+  position:relative;border-radius:14px;overflow:hidden;
+  aspect-ratio:1;isolation:isolate;
+  background:var(--maroon);
+  transform-style:preserve-3d;
+}
+.allied-card:nth-child(1){grid-column:span 2;grid-row:span 2;aspect-ratio:auto;min-height:320px}
+.allied-card:nth-child(8){grid-column:span 2}
+.allied-card:nth-child(15){grid-column:span 2}
+.allied-card img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .7s var(--ease-lux),opacity .4s;
+  opacity:0.85;
+}
+.allied-card:hover img{transform:scale(1.08);opacity:1}
+.allied-spotlight{
+  position:absolute;inset:0;pointer-events:none;z-index:2;
+  background:radial-gradient(circle 140px at var(--mx,50%) var(--my,50%),rgba(212,175,55,0.35),transparent 60%);
+  opacity:0;transition:opacity .3s;
+}
+.allied-card:hover .allied-spotlight{opacity:1}
+.allied-title{
+  position:absolute;bottom:0;left:0;right:0;z-index:3;
+  padding:40px 16px 16px;
+  background:linear-gradient(transparent,rgba(74,8,18,0.92));
+  color:var(--ivory);font-family:var(--font-display);
+  font-size:1.05rem;font-weight:600;line-height:1.2;
+}
+.allied-card:nth-child(1) .allied-title{font-size:1.5rem;padding:60px 24px 24px}
+
+/* WHY + PROPS */
+.why-section{
+  background:linear-gradient(165deg,var(--cream),var(--ivory) 40%,#fff);
+  overflow:visible;
+}
+.why-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;margin-top:40px;
+}
+.why-copy p{margin-bottom:18px;color:rgba(30,27,24,0.78);font-size:1.02rem}
+.why-copy p strong,.why-copy .hl{
+  color:var(--crimson);font-weight:700;
+}
+.stats-row{
+  display:flex;gap:28px;flex-wrap:wrap;margin:36px 0 20px;
+}
+.stat{
+  text-align:center;min-width:100px;
+}
+.stat-num{
+  font-family:var(--font-display);font-size:clamp(2.4rem,4vw,3.2rem);
+  color:var(--crimson);font-weight:700;line-height:1;
+}
+.stat-label{
+  font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--gold);margin-top:6px;font-weight:600;
+}
+.props-stack{position:relative;padding-bottom:20vh}
+.prop-card{
+  position:sticky;top:calc(var(--header-h) + 40px);
+  background:var(--ivory);
+  border:1px solid rgba(212,175,55,0.3);
+  border-radius:16px;padding:28px 32px;
+  margin-bottom:24px;
+  box-shadow:0 8px 30px rgba(74,8,18,0.08);
+  display:flex;gap:20px;align-items:flex-start;
+  will-change:transform,box-shadow;
+}
+.prop-num{
+  font-family:var(--font-display);font-size:2rem;color:var(--gold);
+  font-weight:700;line-height:1;min-width:40px;
+}
+.prop-card p{font-size:1.02rem;color:var(--charcoal);line-height:1.5}
+.prop-card a{color:var(--crimson);font-weight:700}
+
+/* SPOTLIGHTS */
+.spotlight{
+  min-height:100vh;display:grid;grid-template-columns:1fr 1fr;
+  overflow:hidden;position:relative;
+}
+.spotlight:nth-child(even) .spot-visual{order:2}
+.spot-visual{
+  position:relative;min-height:60vh;
+  clip-path:inset(0 100% 0 0);
+}
+.spot-visual img{width:100%;height:100%;object-fit:cover;min-height:100%}
+.spot-visual::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(74,8,18,0.3),transparent);
+}
+.spot-copy{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:clamp(40px,6vw,80px);background:var(--maroon);color:var(--ivory);
+}
+.spot-copy .section-label{color:var(--gold)}
+.spot-copy h2{font-family:var(--font-display);font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:20px;color:var(--ivory)}
+.spot-copy p{opacity:0.88;margin-bottom:14px;font-size:0.98rem;line-height:1.7}
+.spot-copy .btn{
+  display:inline-flex;align-self:flex-start;margin-top:16px;
+  padding:12px 28px;border:1px solid var(--gold);color:var(--champagne);
+  border-radius:999px;font-size:0.85rem;font-weight:600;letter-spacing:0.06em;
+  text-transform:uppercase;transition:background .3s,color .3s;
+}
+.spot-copy .btn:hover{background:var(--gold);color:var(--maroon)}
+
+.blog-section{padding:80px 0;background:var(--cream)}
+.blog-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:40px}
+.blog-card{
+  display:flex;gap:20px;align-items:center;
+  background:var(--ivory);border-radius:14px;overflow:hidden;
+  border:1px solid rgba(212,175,55,0.25);
+  transition:transform .4s,box-shadow .4s;
+}
+.blog-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(74,8,18,0.1)}
+.blog-card img{width:140px;height:140px;object-fit:cover;flex-shrink:0}
+.blog-card h3{font-family:var(--font-display);font-size:1.2rem;color:var(--maroon);padding-right:16px;line-height:1.3}
+
+/* TESTIMONIALS */
+.testimonials-section{
+  padding:100px 0;overflow:hidden;
+  background:linear-gradient(180deg,var(--maroon),#2a060c);
+  color:var(--ivory);
+}
+.testimonials-section .section-title{color:var(--ivory)}
+.testimonials-section .section-label{color:var(--gold)}
+.marquee-wrap{margin-top:48px;display:flex;flex-direction:column;gap:24px}
+.marquee-row{
+  display:flex;gap:24px;width:max-content;will-change:transform;
+}
+.marquee-row.reverse{animation-direction:reverse}
+.t-card{
+  width:380px;flex-shrink:0;
+  background:rgba(255,253,249,0.06);
+  border:1px solid rgba(212,175,55,0.25);
+  border-radius:16px;padding:28px;
+  backdrop-filter:blur(8px);
+  transition:transform .4s var(--ease-lux),box-shadow .4s,background .4s;
+}
+.t-card:hover{
+  transform:translateY(-12px) rotateX(4deg) scale(1.02);
+  box-shadow:0 30px 60px rgba(0,0,0,0.35);
+  background:rgba(255,253,249,0.1);
+}
+.t-card .stars{color:var(--gold);letter-spacing:2px;margin-bottom:12px;font-size:0.9rem}
+.t-card p{font-size:0.92rem;line-height:1.65;opacity:0.9;margin-bottom:20px;font-style:italic}
+.t-author{display:flex;gap:12px;align-items:center}
+.t-author img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+.t-author strong{display:block;font-size:0.95rem;color:var(--champagne)}
+.t-author span{display:block;font-size:0.72rem;opacity:0.7;margin-top:2px}
+
+/* FOOTER */
+.site-footer{
+  background:linear-gradient(180deg,#1a0408,var(--maroon));
+  color:rgba(255,253,249,0.85);padding:80px 0 0;
+}
+.footer-grid{
+  display:grid;grid-template-columns:1.4fr 1fr 0.8fr 1fr;gap:40px;
+  width:min(1240px,92vw);margin:0 auto;padding-bottom:50px;
+}
+.footer-col h4{
+  font-family:var(--font-display);color:var(--champagne);
+  font-size:1.15rem;margin-bottom:18px;font-weight:600;
+}
+.footer-col a{
+  display:block;font-size:0.85rem;padding:5px 0;
+  opacity:0.75;transition:opacity .25s,color .25s,transform .25s;
+}
+.footer-col a:hover{opacity:1;color:var(--gold);transform:translateX(4px)}
+.seo-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.seo-tab{
+  padding:7px 14px;border:1px solid rgba(212,175,55,0.3);border-radius:999px;
+  font-size:0.72rem;background:transparent;color:var(--champagne);cursor:none;
+  transition:background .25s,border-color .25s;
+}
+.seo-tab.active,.seo-tab:hover{background:rgba(212,175,55,0.15);border-color:var(--gold)}
+.seo-panel{display:none;grid-template-columns:repeat(2,1fr);gap:4px 12px}
+.seo-panel.active{display:grid}
+.seo-panel a{font-size:0.8rem}
+.socials{display:flex;gap:12px;margin-bottom:20px}
+.socials a{
+  width:40px;height:40px;border-radius:50%;
+  background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;
+  transition:background .3s,transform .3s;padding:0;
+}
+.socials a:hover{background:rgba(212,175,55,0.25);transform:translateY(-3px)}
+.socials img{width:18px;height:18px}
+.footer-address{font-size:0.88rem;line-height:1.8;opacity:0.85}
+.footer-address strong{color:var(--champagne)}
+.footer-bottom{
+  border-top:1px solid rgba(212,175,55,0.15);
+  padding:18px 0;font-size:0.78rem;
+}
+.footer-bottom-inner{
+  width:min(1240px,92vw);margin:0 auto;
+  display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center;
+}
+.footer-nav{display:flex;flex-wrap:wrap;gap:8px 18px}
+.footer-nav a{opacity:0.7;transition:opacity .25s}
+.footer-nav a:hover{opacity:1;color:var(--gold)}
+
+/* FLOATING UI */
+.float-discount{
+  position:fixed;left:0;top:50%;transform:translateY(-50%);
+  z-index:800;writing-mode:vertical-rl;text-orientation:mixed;
+  background:linear-gradient(180deg,var(--crimson),var(--gold));
+  color:#fff;padding:22px 12px;font-size:0.78rem;font-weight:700;
+  letter-spacing:0.12em;text-transform:uppercase;border-radius:0 12px 12px 0;
+  box-shadow:4px 0 24px rgba(184,29,51,0.35);border:none;cursor:none;
+  transition:padding .3s,filter .3s;
+}
+.float-discount:hover{padding-left:16px;filter:brightness(1.08)}
+.wa-float{
+  position:fixed;right:24px;bottom:24px;z-index:800;
+  width:60px;height:60px;border-radius:50%;
+  background:#25D366;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 28px rgba(37,211,102,0.4);
+  transition:transform .3s;
+}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float::before,.wa-float::after{
+  content:'';position:absolute;inset:0;border-radius:50%;
+  border:2px solid #25D366;animation:waPulse 2s ease-out infinite;
+}
+.wa-float::after{animation-delay:1s}
+@keyframes waPulse{0%{transform:scale(1);opacity:0.7}100%{transform:scale(1.7);opacity:0}}
+.wa-float svg{width:30px;height:30px;fill:#fff;position:relative;z-index:1}
+
+/* DRAWER */
+.drawer-overlay{
+  position:fixed;inset:0;background:rgba(26,4,8,0.65);z-index:900;
+  opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s;
+  backdrop-filter:blur(4px);
+}
+.drawer-overlay.open{opacity:1;visibility:visible}
+.drawer{
+  position:fixed;top:0;right:0;height:100%;width:min(440px,100vw);
+  background:var(--ivory);z-index:910;
+  transform:translateX(105%);
+  transition:transform .55s var(--ease-lux);
+  box-shadow:-20px 0 60px rgba(0,0,0,0.3);
+  overflow-y:auto;padding:36px 28px 48px;
+}
+.drawer.open{transform:translateX(0)}
+.drawer h2{
+  font-family:var(--font-display);font-size:1.8rem;color:var(--maroon);margin-bottom:8px;
+}
+.drawer .sub{font-size:0.9rem;color:rgba(30,27,24,0.65);margin-bottom:28px}
+.drawer-close{
+  position:absolute;top:18px;right:18px;width:36px;height:36px;
+  border:1px solid rgba(212,175,55,0.4);border-radius:50%;
+  background:transparent;font-size:1.2rem;color:var(--maroon);cursor:none;
+}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-grid .full{grid-column:1/-1}
+.form-group label{
+  display:block;font-size:0.72rem;letter-spacing:0.06em;text-transform:uppercase;
+  color:var(--gold);font-weight:600;margin-bottom:6px;
+}
+.form-group input,.form-group select{
+  width:100%;padding:12px 14px;border:1px solid rgba(212,175,55,0.35);
+  border-radius:8px;background:#fff;outline:none;transition:border-color .25s;
+}
+.form-group input:focus,.form-group select:focus{border-color:var(--crimson)}
+.form-submit{
+  width:100%;margin-top:8px;padding:14px;border:none;border-radius:999px;
+  background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));
+  color:#fff;font-weight:700;letter-spacing:0.06em;cursor:none;
+  box-shadow:0 8px 24px rgba(184,29,51,0.3);
+}
+
+/* MOBILE */
+@media (max-width:980px){
+  body{cursor:auto}
+  .cursor,.cursor-dot{display:none!important}
+  .menu-toggle{display:flex}
+  .nav-links{
+    position:fixed;inset:0;top:calc(var(--header-h) + 28px);
+    background:var(--ivory);flex-direction:column;align-items:stretch;
+    padding:24px;gap:4px;transform:translateX(100%);
+    transition:transform .45s var(--ease-lux);overflow-y:auto;z-index:400;
+  }
+  .nav-links.open{transform:translateX(0)}
+  .mega{
+    position:static;transform:none;opacity:1;visibility:visible;pointer-events:auto;
+    display:none;min-width:0;box-shadow:none;border:none;background:var(--cream);
+    grid-template-columns:1fr 1fr;margin-top:4px;
+  }
+  .mega.mega-wide,.mega.mega-narrow{min-width:0}
+  .nav-item.open .mega{display:grid}
+  .nav-item:hover .mega{transform:none}
+  .areas-stack-pin{height:280vh}
+  .area-card{height:min(48vh,380px)}
+  .area-card-body{padding:50px 18px 18px}
+  .area-card-body h2{font-size:1.25rem}
+  .stack-hint{display:none}
+  .allied-grid{grid-template-columns:repeat(2,1fr)}
+  .allied-card:nth-child(1),.allied-card:nth-child(8),.allied-card:nth-child(15){grid-column:span 2}
+  .why-grid,.spotlight,.blog-grid,.footer-grid{grid-template-columns:1fr}
+  .spotlight:nth-child(even) .spot-visual{order:0}
+  .spot-visual{clip-path:none!important;min-height:40vh}
+  .float-discount{writing-mode:horizontal-tb;top:auto;bottom:100px;left:12px;border-radius:999px;padding:12px 16px;font-size:0.68rem}
+  .hero-brand{font-size:clamp(2rem,10vw,3.2rem)}
+  .filter-dock.floating{bottom:90px;border-radius:16px}
+  .utility-inner{font-size:0.65rem;gap:8px 14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}
+}
+</style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader">
+  <img class="preloader-logo" src="https://venueindelhi.com/library/img/venueindelhi-logo.png" alt="Venue In Delhi">
+  <div class="preloader-ornament"></div>
+  <div class="preloader-text">Venue In Delhi</div>
+  <div class="preloader-bar"><span id="preloadBar"></span></div>
+</div>
+<div class="curtain-left" id="curtainL"></div>
+<div class="curtain-right" id="curtainR"></div>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- UTILITY -->
+<div class="utility-bar">
+  <div class="utility-inner">
+    <span>"Unbiased Advice to find the Right Venue"</span>
+    <span class="utility-sep">|</span>
+    <span>Assurance of Best Deal</span>
+    <span class="utility-sep">|</span>
+    <a href="https://venueindelhi.com/wedding/list-venue/">List your venue</a>
+    <span class="utility-sep">|</span>
+    <a class="utility-hotline" href="tel:+918826225533">Call Hotline Number: +91 8826225533</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="nav-row">
+    <a class="logo magnetic" href="https://venueindelhi.com/">
+      <img src="https://venueindelhi.com/library/img/venueindelhi-logo.png" alt="Venue In Delhi">
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="navLinks">
+      <div class="nav-item"><a class="nav-link" href="https://venueindelhi.com/">Home</a></div>
+      <div class="nav-item">
+        <a class="nav-link" href="https://venueindelhi.com/delhi/">Popular Locations <span class="chev">▾</span></a>
+        <div class="mega mega-wide">
+          <a href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-gurgaon/">Gurgaon</a>
+          <a href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-gt-karnal-road/">GT Karnal Road</a>
+          <a href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-vaishali-and-ghaziabad/">Vaishali &amp; Ghaziabad</a>
+          <a href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-chattarpur-and-mg-road/">Chattarpur and MG Road</a>
+          <a href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-nh-8-and-puspanjali/">NH8 and Pushpanjali</a>
+          <a href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-noida-and-greater-noida/">Noida &amp; Greater Noida</a>
+          <a href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-janakpuri-and-dwarka/">Janakpuri and Dwarka</a>
+          <a href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-moti-nagar-and-rama-road/">Moti Nagar &amp; Rama Road</a>
+          <a href="https://venueindelhi.com/wedding-venues-in-delhi/wazirpur-and-gt-industrial-area/">Wazirpur &amp; GT Industrial Area</a>
+          <a href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-mundka-and-rohtak-road/">Mundka &amp; Rohtak Road</a>
+          <a href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-faridabad-and-ballabhgarh/">Faridabad and Ballabhgarh</a>
+          <a href="https://venueindelhi.com/wedding-venues-in-delhi/other-wedding-venues-in-delhi-ncr/">Others in Delhi NCR</a>
+          <a href="https://venueindelhi.com/wedding-venues-in-delhi/best-5-star-banquet-halls-in-delhi-ncr/">Best 5 Star Banquet Halls in Delhi NCR</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="#">Vendors <span class="chev">▾</span></a>
+        <div class="mega mega-wide">
+          <a href="https://venueindelhi.com/vendors/wedding-planners/">Wedding Planners</a>
+          <a href="https://venueindelhi.com/vendors/catering/">Catering</a>
+          <a href="https://venueindelhi.com/vendors/decoration/">Decoration</a>
+          <a href="https://venueindelhi.com/vendors/wedding-photography/">Wedding Photography</a>
+          <a href="https://venueindelhi.com/vendors/dj-entertainment/">DJ &amp; Entertainment</a>
+          <a href="https://venueindelhi.com/vendors/varmala-themes/">Varmala Themes</a>
+          <a href="https://venueindelhi.com/vendors/wedding-dress-designers/">Wedding Dress Designers</a>
+          <a href="https://venueindelhi.com/vendors/make-up-services/">Make-up Services</a>
+          <a href="https://venueindelhi.com/vendors/wedding-invitation/">Wedding Invitation</a>
+          <a href="https://venueindelhi.com/vendors/wedding-gifts/">Wedding Gifts</a>
+          <a href="https://venueindelhi.com/vendors/wedding-cakes/">Wedding Cakes</a>
+          <a href="https://venueindelhi.com/vendors/wedding-rental-staff/">Wedding Rental &amp; Staff</a>
+          <a href="https://venueindelhi.com/vendors/wedding-choreography/">Wedding Choreography</a>
+          <a href="https://venueindelhi.com/vendors/wedding-band/">Wedding Band</a>
+          <a href="https://venueindelhi.com/vendors/ghoriwala-baggi-palki/">Ghoriwala, Baggi &amp; Palki</a>
+          <a href="https://venueindelhi.com/vendors/fireworks/">Fireworks</a>
+          <a href="https://venueindelhi.com/vendors/celebrity-artist-management/">Celebrity &amp; Artist Management</a>
+          <a href="https://venueindelhi.com/vendors/honeymoon-tours/">Honeymoon &amp; Tours</a>
+          <a href="https://venueindelhi.com/vendors/lodging-transportation/">Lodging &amp; Transportation</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a class="nav-link" href="#">Non Wedding Functions <span class="chev">▾</span></a>
+        <div class="mega mega-narrow">
+          <a href="https://venueindelhi.com/wedding/social-functions/">Social Functions</a>
+          <a href="https://venueindelhi.com/wedding/corporate-functions/">Corporate Functions</a>
+        </div>
+      </div>
+      <div class="nav-item"><a class="nav-link nav-cta magnetic" href="https://venueindelhi.com/wedding/book-now/">Book Now</a></div>
+      <div class="nav-item"><a class="nav-link" href="https://venueindelhi.com/wedding/who-we-are/">Who We Are?</a></div>
+      <div class="nav-item"><a class="nav-link" href="https://venueindelhi.com/wedding/official-blog-venue-in-delhi/">Blog</a></div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-pin-wrap" id="heroPin">
+  <div class="hero" id="hero">
+    <div class="hero-patterns" aria-hidden="true">
+      <div class="jali"></div>
+      <div class="vine vine-l"></div>
+      <div class="vine vine-r"></div>
+      <div class="mandala">
+        <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="100" cy="100" r="95" stroke="currentColor" stroke-width="0.6"/>
+          <circle cx="100" cy="100" r="78" stroke="currentColor" stroke-width="0.5"/>
+          <circle cx="100" cy="100" r="58" stroke="currentColor" stroke-width="0.5"/>
+          <circle cx="100" cy="100" r="28" stroke="currentColor" stroke-width="0.7"/>
+          <circle cx="100" cy="100" r="10" fill="currentColor" opacity="0.35"/>
+          <g stroke="currentColor" stroke-width="0.55">
+            <path d="M100 5 L108 42 L100 55 L92 42 Z"/>
+            <path d="M100 5 L108 42 L100 55 L92 42 Z" transform="rotate(45 100 100)"/>
+            <path d="M100 5 L108 42 L100 55 L92 42 Z" transform="rotate(90 100 100)"/>
+            <path d="M100 5 L108 42 L100 55 L92 42 Z" transform="rotate(135 100 100)"/>
+            <path d="M100 5 L108 42 L100 55 L92 42 Z" transform="rotate(180 100 100)"/>
+            <path d="M100 5 L108 42 L100 55 L92 42 Z" transform="rotate(225 100 100)"/>
+            <path d="M100 5 L108 42 L100 55 L92 42 Z" transform="rotate(270 100 100)"/>
+            <path d="M100 5 L108 42 L100 55 L92 42 Z" transform="rotate(315 100 100)"/>
+          </g>
+          <g stroke="currentColor" stroke-width="0.45" opacity="0.8">
+            <path d="M100 55 Q118 70 100 88 Q82 70 100 55"/>
+            <path d="M100 55 Q118 70 100 88 Q82 70 100 55" transform="rotate(60 100 100)"/>
+            <path d="M100 55 Q118 70 100 88 Q82 70 100 55" transform="rotate(120 100 100)"/>
+            <path d="M100 55 Q118 70 100 88 Q82 70 100 55" transform="rotate(180 100 100)"/>
+            <path d="M100 55 Q118 70 100 88 Q82 70 100 55" transform="rotate(240 100 100)"/>
+            <path d="M100 55 Q118 70 100 88 Q82 70 100 55" transform="rotate(300 100 100)"/>
+          </g>
+        </svg>
+      </div>
+      <div class="paisley paisley-tl">
+        <svg viewBox="0 0 200 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M110 20 C160 40 185 95 160 145 C140 180 95 200 70 175 C40 145 55 95 85 70 C55 100 50 145 80 165 C105 182 140 155 145 120 C150 80 125 40 110 20 Z" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M115 45 C145 60 160 100 140 130 C125 150 95 155 85 135 C70 110 90 75 115 45 Z" stroke="currentColor" stroke-width="0.8" opacity="0.7"/>
+          <circle cx="118" cy="95" r="8" stroke="currentColor" stroke-width="0.8"/>
+          <path d="M40 190 Q70 160 95 185 Q120 210 90 220 Q55 230 40 190 Z" stroke="currentColor" stroke-width="0.9" opacity="0.65"/>
+          <path d="M155 195 Q175 175 190 200 Q175 220 155 195 Z" stroke="currentColor" stroke-width="0.8" opacity="0.55"/>
+        </svg>
+      </div>
+      <div class="paisley paisley-br">
+        <svg viewBox="0 0 200 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M110 20 C160 40 185 95 160 145 C140 180 95 200 70 175 C40 145 55 95 85 70 C55 100 50 145 80 165 C105 182 140 155 145 120 C150 80 125 40 110 20 Z" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M115 45 C145 60 160 100 140 130 C125 150 95 155 85 135 C70 110 90 75 115 45 Z" stroke="currentColor" stroke-width="0.8" opacity="0.7"/>
+          <circle cx="118" cy="95" r="8" stroke="currentColor" stroke-width="0.8"/>
+        </svg>
+      </div>
+      <div class="corner c-tl"><svg viewBox="0 0 100 100" fill="none"><path d="M8 8 H55 M8 8 V55" stroke="currentColor" stroke-width="1.5"/><path d="M8 22 H40 M22 8 V40" stroke="currentColor" stroke-width="0.8" opacity="0.7"/><path d="M8 8 Q35 12 42 42" stroke="currentColor" stroke-width="0.9"/><circle cx="28" cy="28" r="5" stroke="currentColor" stroke-width="0.8"/><path d="M55 8 L62 14 L55 20" stroke="currentColor" stroke-width="0.8"/><path d="M8 55 L14 62 L20 55" stroke="currentColor" stroke-width="0.8"/></svg></div>
+      <div class="corner c-tr"><svg viewBox="0 0 100 100" fill="none"><path d="M8 8 H55 M8 8 V55" stroke="currentColor" stroke-width="1.5"/><path d="M8 22 H40 M22 8 V40" stroke="currentColor" stroke-width="0.8" opacity="0.7"/><path d="M8 8 Q35 12 42 42" stroke="currentColor" stroke-width="0.9"/><circle cx="28" cy="28" r="5" stroke="currentColor" stroke-width="0.8"/><path d="M55 8 L62 14 L55 20" stroke="currentColor" stroke-width="0.8"/><path d="M8 55 L14 62 L20 55" stroke="currentColor" stroke-width="0.8"/></svg></div>
+      <div class="corner c-bl"><svg viewBox="0 0 100 100" fill="none"><path d="M8 8 H55 M8 8 V55" stroke="currentColor" stroke-width="1.5"/><path d="M8 22 H40 M22 8 V40" stroke="currentColor" stroke-width="0.8" opacity="0.7"/><path d="M8 8 Q35 12 42 42" stroke="currentColor" stroke-width="0.9"/><circle cx="28" cy="28" r="5" stroke="currentColor" stroke-width="0.8"/><path d="M55 8 L62 14 L55 20" stroke="currentColor" stroke-width="0.8"/><path d="M8 55 L14 62 L20 55" stroke="currentColor" stroke-width="0.8"/></svg></div>
+      <div class="corner c-br"><svg viewBox="0 0 100 100" fill="none"><path d="M8 8 H55 M8 8 V55" stroke="currentColor" stroke-width="1.5"/><path d="M8 22 H40 M22 8 V40" stroke="currentColor" stroke-width="0.8" opacity="0.7"/><path d="M8 8 Q35 12 42 42" stroke="currentColor" stroke-width="0.9"/><circle cx="28" cy="28" r="5" stroke="currentColor" stroke-width="0.8"/><path d="M55 8 L62 14 L55 20" stroke="currentColor" stroke-width="0.8"/><path d="M8 55 L14 62 L20 55" stroke="currentColor" stroke-width="0.8"/></svg></div>
+    </div>
+    <div class="hero-mask" id="heroMask">
+      <div class="hero-slides">
+        <div class="hero-slide"><img src="https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?auto=format&amp;fit=crop&amp;w=1800&amp;q=80" alt="Indian wedding celebration" decoding="async"></div>
+        <div class="hero-slide"><img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&amp;fit=crop&amp;w=1800&amp;q=80" alt="Wedding florals" decoding="async"></div>
+        <div class="hero-slide"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&amp;fit=crop&amp;w=1800&amp;q=80" alt="Wedding couple" decoding="async"></div>
+        <div class="hero-slide"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&amp;fit=crop&amp;w=1800&amp;q=80" alt="Wedding venue decor" decoding="async"></div>
+        <div class="hero-slide"><img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&amp;fit=crop&amp;w=1800&amp;q=80" alt="Wedding ceremony" decoding="async"></div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-brand">
+        <span class="left-word" id="heroLeft">Venue</span>
+        <span class="right-word" id="heroRight">In Delhi</span>
+      </h1>
+      <p class="hero-sub">Hassle Free Wedding Planner — Find &amp; book the perfect wedding venue across Delhi NCR</p>
+      <div class="hero-scroll-hint" id="scrollHint"><span>Scroll</span><div class="line"></div></div>
+    </div>
+    <div class="filter-dock" id="filterDock">
+      <h3>Filter your venue by city</h3>
+      <div class="filter-row">
+        <select aria-label="City">
+          <option value="">City</option>
+          <option>Gurgaon</option>
+          <option>Noida</option>
+          <option>GT Karnal Road</option>
+          <option>Chattarpur</option>
+          <option>Faridabad</option>
+          <option>Ghaziabad</option>
+          <option>Dwarka</option>
+          <option>Janakpuri</option>
+        </select>
+        <input type="text" placeholder="Search Your Venue by Name" name="s">
+        <button class="filter-btn magnetic" type="button">Search</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POPULAR AREAS — depth stack carousel -->
+<section class="areas-section" id="areasPin">
+  <div class="areas-stack-pin">
+  <div class="areas-stack-sticky">
+  <div class="areas-header">
+    <div>
+      <span class="section-label">Explore Delhi NCR</span>
+      <h2 class="section-title"><a href="https://www.venueindelhi.com/delhi">Popular Areas of Wedding Venues In Delhi NCR</a></h2>
+    </div>
+    <p class="areas-header-meta">Scroll to flip through 15 venue pockets — stacked in depth.</p>
+  </div>
+  <div class="stack-stage" id="areasTrack">
+<a class="area-card magnetic" href="https://venueindelhi.com/wedding-venues-in-delhi/best-5-star-banquet-halls-in-delhi-ncr/">
+          <div class="area-card-inner">
+            <div class="area-card-media">
+              <span class="area-badge">Explore</span>
+              <img src="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Best 5 Star Banquet Halls in Delhi NCR" loading="lazy">
+            </div>
+            <div class="area-card-body">
+              <h2>Best 5 Star Banquet Halls in Delhi NCR</h2>
+              <span>01 — Venue Area</span>
+            </div>
+          </div>
+        </a>
+<a class="area-card magnetic" href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-chattarpur-and-mg-road/">
+          <div class="area-card-inner">
+            <div class="area-card-media">
+              <span class="area-badge">Explore</span>
+              <img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Chattarpur and MG Road" loading="lazy">
+            </div>
+            <div class="area-card-body">
+              <h2>Chattarpur and MG Road</h2>
+              <span>02 — Venue Area</span>
+            </div>
+          </div>
+        </a>
+<a class="area-card magnetic" href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-faridabad-and-ballabhgarh/">
+          <div class="area-card-inner">
+            <div class="area-card-media">
+              <span class="area-badge">Explore</span>
+              <img src="https://images.pexels.com/photos/1045541/pexels-photo-1045541.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Faridabad and Ballabhgarh" loading="lazy">
+            </div>
+            <div class="area-card-body">
+              <h2>Faridabad and Ballabhgarh</h2>
+              <span>03 — Venue Area</span>
+            </div>
+          </div>
+        </a>
+<a class="area-card magnetic" href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-gt-karnal-road/">
+          <div class="area-card-inner">
+            <div class="area-card-media">
+              <span class="area-badge">Explore</span>
+              <img src="https://images.pexels.com/photos/3310699/pexels-photo-3310699.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="GT Karnal Road" loading="lazy">
+            </div>
+            <div class="area-card-body">
+              <h2>GT Karnal Road</h2>
+              <span>04 — Venue Area</span>
+            </div>
+          </div>
+        </a>
+<a class="area-card magnetic" href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-gurgaon/">
+          <div class="area-card-inner">
+            <div class="area-card-media">
+              <span class="area-badge">Explore</span>
+              <img src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Gurgaon" loading="lazy">
+            </div>
+            <div class="area-card-body">
+              <h2>Gurgaon</h2>
+              <span>05 — Venue Area</span>
+            </div>
+          </div>
+        </a>
+<a class="area-card magnetic" href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-janakpuri-and-dwarka/">
+          <div class="area-card-inner">
+            <div class="area-card-media">
+              <span class="area-badge">Explore</span>
+              <img src="https://images.pexels.com/photos/1488315/pexels-photo-1488315.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Janakpuri and Dwarka" loading="lazy">
+            </div>
+            <div class="area-card-body">
+              <h2>Janakpuri and Dwarka</h2>
+              <span>06 — Venue Area</span>
+            </div>
+          </div>
+        </a>
+<a class="area-card magnetic" href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-kirtinagar-mayapuri/">
+          <div class="area-card-inner">
+            <div class="area-card-media">
+              <span class="area-badge">Explore</span>
+              <img src="https://images.pexels.com/photos/888722/pexels-photo-888722.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Kirti Nagar and Mayapuri" loading="lazy">
+            </div>
+            <div class="area-card-body">
+              <h2>Kirti Nagar and Mayapuri</h2>
+              <span>07 — Venue Area</span>
+            </div>
+          </div>
+        </a>
+<a class="area-card magnetic" href="https://venueindelhi.com/wedding-venues-in-delhi/manesar/">
+          <div class="area-card-inner">
+            <div class="area-card-media">
+              <span class="area-badge">Explore</span>
+              <img src="https://images.pexels.com/photos/2959192/pexels-photo-2959192.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Star Continental Greater Noida" loading="lazy">
+            </div>
+            <div class="area-card-body">
+              <h2>Star Continental Greater Noida</h2>
+              <span>08 — Venue Area</span>
+            </div>
+          </div>
+        </a>
+<a class="area-card magnetic" href="https://venueindelhi.com/wedding-venues-in-delhi/manesar/">
+          <div class="area-card-inner">
+            <div class="area-card-media">
+              <span class="area-badge">Explore</span>
+              <img src="https://images.pexels.com/photos/3872626/pexels-photo-3872626.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Manesar" loading="lazy">
+            </div>
+            <div class="area-card-body">
+              <h2>Manesar</h2>
+              <span>09 — Venue Area</span>
+            </div>
+          </div>
+        </a>
+<a class="area-card magnetic" href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-moti-nagar-and-rama-road/">
+          <div class="area-card-inner">
+            <div class="area-card-media">
+              <span class="area-badge">Explore</span>
+              <img src="https://images.pexels.com/photos/2788792/pexels-photo-2788792.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Moti Nagar &amp; Rama Road" loading="lazy">
+            </div>
+            <div class="area-card-body">
+              <h2>Moti Nagar &amp; Rama Road</h2>
+              <span>10 — Venue Area</span>
+            </div>
+          </div>
+        </a>
+<a class="area-card magnetic" href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-mundka-and-rohtak-road/">
+          <div class="area-card-inner">
+            <div class="area-card-media">
+              <span class="area-badge">Explore</span>
+              <img src="https://images.pexels.com/photos/2306281/pexels-photo-2306281.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Mundka &amp; Rohtak Road" loading="lazy">
+            </div>
+            <div class="area-card-body">
+              <h2>Mundka &amp; Rohtak Road</h2>
+              <span>11 — Venue Area</span>
+            </div>
+          </div>
+        </a>
+<a class="area-card magnetic" href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-nh-8-and-puspanjali/">
+          <div class="area-card-inner">
+            <div class="area-card-media">
+              <span class="area-badge">Explore</span>
+              <img src="https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="NH8 and Pushpanjali" loading="lazy">
+            </div>
+            <div class="area-card-body">
+              <h2>NH8 and Pushpanjali</h2>
+              <span>12 — Venue Area</span>
+            </div>
+          </div>
+        </a>
+<a class="area-card magnetic" href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-noida-and-greater-noida/">
+          <div class="area-card-inner">
+            <div class="area-card-media">
+              <span class="area-badge">Explore</span>
+              <img src="https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Noida &amp; Greater Noida" loading="lazy">
+            </div>
+            <div class="area-card-body">
+              <h2>Noida &amp; Greater Noida</h2>
+              <span>13 — Venue Area</span>
+            </div>
+          </div>
+        </a>
+<a class="area-card magnetic" href="https://venueindelhi.com/wedding-venues-in-delhi/venue-in-vaishali-and-ghaziabad/">
+          <div class="area-card-inner">
+            <div class="area-card-media">
+              <span class="area-badge">Explore</span>
+              <img src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Vaishali &amp; Ghaziabad" loading="lazy">
+            </div>
+            <div class="area-card-body">
+              <h2>Vaishali &amp; Ghaziabad</h2>
+              <span>14 — Venue Area</span>
+            </div>
+          </div>
+        </a>
+<a class="area-card magnetic" href="https://venueindelhi.com/wedding-venues-in-delhi/wazirpur-and-gt-industrial-area/">
+          <div class="area-card-inner">
+            <div class="area-card-media">
+              <span class="area-badge">Explore</span>
+              <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Wazirpur &amp; GT Industrial Area" loading="lazy">
+            </div>
+            <div class="area-card-body">
+              <h2>Wazirpur &amp; GT Industrial Area</h2>
+              <span>15 — Venue Area</span>
+            </div>
+          </div>
+        </a>
+  </div>
+  <div class="stack-ui">
+    <div class="stack-counter"><em id="stackCurrent">01</em> / 15</div>
+    <div class="stack-bar"><div class="stack-bar-fill" id="stackBarFill"></div></div>
+    <span class="stack-hint">Scroll</span>
+  </div>
+  </div>
+  </div>
+</section>
+
+<!-- ALLIED SERVICES -->
+<section class="section allied-section" id="allied">
+  <div class="container">
+    <span class="section-label">Vendors &amp; Services</span>
+    <h2 class="section-title">Allied Services</h2>
+    <p class="section-lead">After deciding the venue, we have to take numerous decisions for various allied services. At venueindelhi.com, we provide you solutions for each and every little thing that is involved in a wedding.</p>
+    <div class="allied-grid" id="alliedGrid">
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/celebrity-artist-management/">
+        <img src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Celebrity &amp; Artist Management" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">Celebrity &amp; Artist Management</div>
+      </a>
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/lodging-transportation/">
+        <img src="https://images.pexels.com/photos/3310699/pexels-photo-3310699.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Lodging and Transportation" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">Lodging and Transportation</div>
+      </a>
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/wedding-fireworks/">
+        <img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Wedding Fireworks" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">Wedding Fireworks</div>
+      </a>
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/ghoriwala-baggi-palki/">
+        <img src="https://images.pexels.com/photos/1488315/pexels-photo-1488315.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Ghoriwala, Baggi and Palki" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">Ghoriwala, Baggi and Palki</div>
+      </a>
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/wedding-band/">
+        <img src="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Wedding Band" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">Wedding Band</div>
+      </a>
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/honeymoon-tours/">
+        <img src="https://images.pexels.com/photos/1045541/pexels-photo-1045541.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Honeymoon &amp; Tours" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">Honeymoon &amp; Tours</div>
+      </a>
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/wedding-choreography/">
+        <img src="https://images.pexels.com/photos/2959192/pexels-photo-2959192.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Wedding Choreography" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">Wedding Choreography</div>
+      </a>
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/wedding-rental-staff/">
+        <img src="https://images.pexels.com/photos/3872626/pexels-photo-3872626.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Wedding Rental &amp; Staff" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">Wedding Rental &amp; Staff</div>
+      </a>
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/wedding-cakes-in-delhi-ncr/">
+        <img src="https://images.pexels.com/photos/888722/pexels-photo-888722.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Wedding Cakes" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">Wedding Cakes</div>
+      </a>
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/wedding-invitation/">
+        <img src="https://images.pexels.com/photos/2788792/pexels-photo-2788792.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Wedding Invitation" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">Wedding Invitation</div>
+      </a>
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/wedding-gifts/">
+        <img src="https://images.pexels.com/photos/2306281/pexels-photo-2306281.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Wedding Gifts" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">Wedding Gifts</div>
+      </a>
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/make-up-services/">
+        <img src="https://images.pexels.com/photos/265722/pexels-photo-265722.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Make-up Services" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">Make-up Services</div>
+      </a>
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/wedding-caterers-in-delhi-ncr/">
+        <img src="https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Wedding Caterers in Delhi" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">Wedding Caterers in Delhi</div>
+      </a>
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/wedding-decoration-in-delhi/">
+        <img src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=700" alt="Wedding Decorators in Delhi" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">Wedding Decorators in Delhi</div>
+      </a>
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/wedding-photographer-in-delhi-ncr/">
+        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Wedding Photographers" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">Wedding Photographers</div>
+      </a>
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/dj-entertainment-in-delhi-ncr/">
+        <img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="DJ &amp; Entertainment" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">DJ &amp; Entertainment</div>
+      </a>
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/jaimala-varmala-themes-in-delhi/">
+        <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Varmala Themes" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">Varmala Themes</div>
+      </a>
+<a class="allied-card magnetic" href="https://venueindelhi.com/allied-services/wedding-dress-designers-in-delhi-ncr/">
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Wedding Dress Designers" loading="lazy">
+        <div class="allied-spotlight"></div>
+        <div class="allied-title">Wedding Dress Designers</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY BOOK -->
+<section class="section why-section" id="why">
+  <div class="container">
+    <span class="section-label">Why VenueInDelhi</span>
+    <h2 class="section-title">Why Book with us?</h2>
+    <div class="why-grid">
+      <div class="why-copy">
+        <p>If you're searching for a wonderful wedding venue in Delhi NCR, you're in luck! VenueInDelhi is here to help you find and book the perfect place for your special day. We offer a range of wedding services to make your wedding planning easy and stress-free. We can also customize your wedding according to your budget and preferences.</p>
+        <p>As the leading wedding planner in Delhi, we have a long list of happy clients who have trusted us with their big day. We have access to over <span class="hl">1200 different venues in Delhi NCR</span>, including hotels, resorts, banquet halls, farmhouses, tents, community halls, lawns, and more. Our experts take care of all the details to ensure that booking a wedding venue is a smooth and hassle-free process.</p>
+        <p>Choosing the right wedding venue in Delhi NCR can be a tough decision, but we've been helping couples for the past <span class="hl">11 years</span> to make it an enjoyable and stress-free experience. Whether you're planning an intimate gathering or a grand event, our venues can accommodate all kinds of celebrations, including wedding receptions, parties, special occasions, work gatherings, and corporate events.</p>
+        <p>We're here to make your wedding dreams come true by providing a wide range of venue options and professional services.We Can Take Care Of Your Every Single Details So You Can Focous On Your Event Stress Free</p>
+        <div class="stats-row">
+          <div class="stat"><div class="stat-num" data-count="1200">0</div><div class="stat-label">Venues</div></div>
+          <div class="stat"><div class="stat-num" data-count="11">0</div><div class="stat-label">Years</div></div>
+          <div class="stat"><div class="stat-num" data-count="30" data-suffix="%">0</div><div class="stat-label">Discount</div></div>
+        </div>
+      </div>
+      <div class="props-stack">
+        <h3 class="section-title" style="font-size:1.8rem;margin-bottom:28px">Our Unique Propositions</h3>
+        <div class="prop-card" style="top:calc(var(--header-h) + 40px)"><span class="prop-num">01</span><p>Best rates in the industry owing to bulk bookings in the name of <a href="https://venueindelhi.com/"><strong>VenueInDelhi</strong></a>.</p></div>
+        <div class="prop-card" style="top:calc(var(--header-h) + 56px)"><span class="prop-num">02</span><p>We provide you Unbiased Advice to find the Right Venue.</p></div>
+        <div class="prop-card" style="top:calc(var(--header-h) + 72px)"><span class="prop-num">03</span><p>Personalized one-on-one support. We personally assist you till the last moment for your event.</p></div>
+        <div class="prop-card" style="top:calc(var(--header-h) + 88px)"><span class="prop-num">04</span><p>If you book wedding venues with us we will provide you with a free event coordinator</p></div>
+        <div class="prop-card" style="top:calc(var(--header-h) + 104px)"><span class="prop-num">05</span><p>Transparency in making and handling deals with utmost integrity.</p></div>
+        <div class="prop-card" style="top:calc(var(--header-h) + 120px)"><span class="prop-num">06</span><p>You meet all event requirements under one roof.</p></div>
+        <div class="prop-card" style="top:calc(var(--header-h) + 136px)"><span class="prop-num">07</span><p>Hassle free transaction</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPOTLIGHTS -->
+<section class="spotlight" data-spotlight>
+  <div class="spot-visual"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Destination Wedding" loading="lazy"></div>
+  <div class="spot-copy">
+    <span class="section-label">Celebrate Beyond Borders</span>
+    <h2>Destination Wedding</h2>
+    <p>The wonderful thing about Destination Wedding is that the bride, groom, friends, families and guests not only attend various events but also spend quality time together during the stay. Destination wedding is also an intimate way for a couple to share their D day with the people who are most important for them. A couple may come from different regions, countries or even continents and have friends and relatives from all over hence it becomes even more imperative to finalize the plan which fits for all.</p>
+    <p>How about having a wedding in India... Rajasthan ( palaces and forts), Goa ( Lovely Beaches, Uttrakhand ( Indian traditional style on the banks of River Ganga at Rishikesh and the hills of Mussorie), Agra( Taj Mahal as a backdrop View).. and some heritage near Delhi.</p>
+    <p>The Wedding destinations are just a click away from you fill the below given from and and let our expert wedding planners to guide you to your perfect celebration point..</p>
+    <a class="btn magnetic" href="https://venueindelhi.com/destination-wedding">View more</a>
+  </div>
+</section>
+<section class="spotlight" data-spotlight>
+  <div class="spot-visual"><img src="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Wedding Tents & Pandals" loading="lazy"></div>
+  <div class="spot-copy">
+    <span class="section-label">Open Sky Celebrations</span>
+    <h2>Wedding Tents &amp; Pandals</h2>
+    <p>Looking for tent house in Delhi? You are at the right and suitable place to choose the tent house services for the event.</p>
+    <p>Delhi is a versatile space for the tents whether you have requirement of tents at Neta Ji Subsah Palace (NSP), tents at Deepali Chowk, tents at Punjabi Bag, or you can take tents at Raja Garden or tents in east delhi Venue In Delhi has the perfect arrangement of all services related tent house in Delhi NCR. We are one of the renowned tent service provider comprising a range of packages to suit the requirements of any occasions in Delhi and NCR.</p>
+    <a class="btn magnetic" href="https://venueindelhi.com/wedding-tents-and-pandals-in-delhi-ncr/">View more</a>
+  </div>
+</section>
+<section class="spotlight" data-spotlight>
+  <div class="spot-visual"><img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1400" alt="Hotels in Delhi" loading="lazy"></div>
+  <div class="spot-copy">
+    <span class="section-label">Stay &amp; Celebrate</span>
+    <h2>Hotels in Delhi</h2>
+    <p>This section of the Venue In Delhi tell you about all categories of Hotels in whether it's a 5 Star luxurious hotel or a budgeted hotels for bulk booking for the function like wedding.</p>
+    <a class="btn magnetic" href="#">View more</a>
+  </div>
+</section>
+
+<section class="blog-section">
+  <div class="container">
+    <span class="section-label">Insights</span>
+    <h2 class="section-title">Wedding Blog</h2>
+    <div class="blog-grid">
+      <a class="blog-card magnetic" href="https://venueindelhi.com/blog/top-10-wedding-venues-in-gt-karnal-road/" target="_blank">
+        <img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Top 10 Wedding Venues in GT Karnal Road">
+        <h3>Top 10 Wedding Venues in GT Karnal Road</h3>
+      </a>
+      <a class="blog-card magnetic" href="https://venueindelhi.com/blog/wedding-destination/" target="_blank">
+        <img src="https://images.pexels.com/photos/1045541/pexels-photo-1045541.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="The Ultimate Guide to Choosing the Perfect Wedding Destination">
+        <h3>The Ultimate Guide to Choosing the Perfect Wedding Destination</h3>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section" id="testimonials">
+  <div class="container">
+    <span class="section-label">Love Notes</span>
+    <h2 class="section-title">What Our Client Say</h2>
+  </div>
+  <div class="marquee-wrap" id="marqueeWrap">
+    <div class="marquee-row" id="marquee1"></div>
+    <div class="marquee-row" id="marquee2"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Venue Directory</h4>
+      <div class="seo-tabs" id="seoTabs">
+        <button class="seo-tab active" data-panel="haryana">Haryana</button>
+        <button class="seo-tab" data-panel="hp">Himachal Pradesh</button>
+        <button class="seo-tab" data-panel="punjab">Punjab</button>
+        <button class="seo-tab" data-panel="raj">Rajasthan</button>
+        <button class="seo-tab" data-panel="up">Uttar Pradesh</button>
+        <button class="seo-tab" data-panel="uk">Uttarakhand</button>
+        <button class="seo-tab" data-panel="gg">Gurgaon</button>
+      </div>
+      <div class="seo-panel active" id="panel-haryana">
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/faridabad/">Faridabad</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/gurgaon/">Gurgaon</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/hisar/">Hisar</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/jhajjar/">Jhajjar</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/karnal/">Karnal</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/murthal/">Murthal</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/panipat/">Panipat</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/sonipat/">Sonipat</a>
+      </div>
+      <div class="seo-panel" id="panel-hp">
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/manali/">Manali</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/parwanoo/">Parwanoo</a>
+      </div>
+      <div class="seo-panel" id="panel-punjab">
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/phagwara/">Phagwara</a>
+      </div>
+      <div class="seo-panel" id="panel-raj">
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/alsisar/">Alsisar</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/alwar/">Alwar</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/behror/">Behror</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/bharatpur/">Bharatpur</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/bhiwadi/">Bhiwadi</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/bikaner/">Bikaner</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/jaipur/">Jaipur</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/jodhpur/">Jodhpur</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/neemrana/">Neemrana</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/pushkar/">Pushkar</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/udaipur/">Udaipur</a>
+      </div>
+      <div class="seo-panel" id="panel-up">
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/agra/">Agra</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/baghpat/">Baghpat</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/hapur/">Hapur</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/meerut/">Meerut</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/noida/">Noida</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/vrindavan/">Vrindavan</a>
+      </div>
+      <div class="seo-panel" id="panel-uk">
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/haridwar/">Haridwar</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/jim-corbett/">Jim Corbett</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/mussoorie/">Mussoorie</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/nainital/">Nainital</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/rishikesh/">Rishikesh</a>
+      </div>
+      <div class="seo-panel" id="panel-gg">
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/baliawas/">Baliawas</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/golf-course-road/">Golf Course Road</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/huda-city-centre/">HUDA City Centre</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/kapashera/">Kapashera</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/manesar/">Manesar</a>
+        <a href="https://venueindelhi.com/wedding-venues-in-delhi/worldmark/">Worldmark</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Allied Services</h4>
+      <a href="https://venueindelhi.com/">Wedding Planners in Delhi</a>
+      <a href="https://venueindelhi.com/allied-services/wedding-decoration-in-delhi/">Wedding Decorators in Delhi</a>
+      <a href="https://venueindelhi.com/allied-services/wedding-caterers-in-delhi-ncr/">Wedding Caterers in Delhi</a>
+      <a href="https://venueindelhi.com/allied-services/wedding-photographer-in-delhi-ncr/">Wedding Photographers</a>
+      <a href="https://venueindelhi.com/allied-services/dj-entertainment-in-delhi-ncr/">DJ &amp; Entertainment</a>
+      <a href="https://venueindelhi.com/allied-services/make-up-services/">Make-up Services</a>
+      <a href="https://venueindelhi.com/allied-services/celebrity-artist-management/">Celebrity &amp; Artist Management</a>
+      <a href="https://venueindelhi.com/allied-services/honeymoon-tours/">Honeymoon &amp; Tours</a>
+    </div>
+    <div class="footer-col">
+      <h4>Non Wedding Functions</h4>
+      <a href="https://venueindelhi.com/wedding/social-functions/">Social Functions</a>
+      <a href="https://venueindelhi.com/wedding/corporate-functions/">Corporate Functions</a>
+      <a href="https://venueindelhi.com/destination-wedding">Destination Wedding</a>
+      <a href="https://venueindelhi.com/wedding-tents-and-pandals-in-delhi-ncr/">Tents &amp; Pandals</a>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us Around</h4>
+      <div class="socials">
+        <a href="https://www.facebook.com/venueindelhi" target="_blank" rel="noopener"><img src="https://images.pexels.com/photos/2253870/pexels-photo-2253870.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Facebook"></a>
+        <a href="http://www.youtube.com/channel/UC88KqMhiC94wVCqCwlzhbwQ" target="_blank" rel="noopener"><img src="https://images.pexels.com/photos/1045541/pexels-photo-1045541.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="YouTube"></a>
+        <a href="https://twitter.com/venueindelhi" target="_blank" rel="noopener"><img src="https://images.pexels.com/photos/3310699/pexels-photo-3310699.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Twitter"></a>
+        <a href="https://www.linkedin.com/in/venuein-delhi-235b1288/" target="_blank" rel="noopener"><img src="https://images.pexels.com/photos/2788488/pexels-photo-2788488.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="LinkedIn"></a>
+        <a href="https://www.pinterest.com/venueindelhi/" target="_blank" rel="noopener"><img src="https://images.pexels.com/photos/1488315/pexels-photo-1488315.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=800" alt="Pinterest"></a>
+      </div>
+      <div class="footer-address" itemscope itemtype="http://schema.org/LocalBusiness">
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          <span itemprop="streetAddress">A1-354/ 3rd Floor, Sector 6, Rohini,</span><br>
+          <span itemprop="addressLocality">New Delhi</span>- <span itemprop="postalCode">110085</span>
+        </div>
+        <strong>Email:</strong> <a href="mailto:welcome@venueindelhi.com">welcome@venueindelhi.com</a><br>
+        <strong>Voice Number:</strong> <a href="tel:+917838433266">+91 7838433266</a><br>
+        <strong>Write to us:</strong> <a href="mailto:contactus@venueindelhi.com">contactus@venueindelhi.com</a><br>
+        <strong>Hotline:</strong> <a href="tel:+918826225533">+91 8826225533</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <div>Copyright © 2012-26 <a href="https://www.venueindelhi.com/">Venue In Delhi</a> All rights reserved</div>
+      <ul class="footer-nav">
+        <li><a href="https://venueindelhi.com/wedding/who-we-are/">Who We Are?</a></li>
+        <li><a href="https://venueindelhi.com/wedding/contact-us/">Where you can find us?</a></li>
+        <li><a href="https://venueindelhi.com/sitemap.xml">Sitemap</a></li>
+        <li><a href="https://venueindelhi.com/wedding/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="https://venueindelhi.com/wedding/terms-conditions/">Terms &amp; Conditions</a></li>
+        <li><a href="https://venueindelhi.com/wedding/faqs/">FAQ's</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING -->
+<button class="float-discount magnetic" id="openDrawer" type="button">Get Up-to 30% Discount</button>
+<a class="wa-float magnetic" href="https://api.whatsapp.com/send?phone=918826225533" target="_blank" rel="noopener" aria-label="WhatsApp Us">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.85 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <button class="drawer-close" id="closeDrawer" aria-label="Close">×</button>
+  <h2>Get Up-to 30% Discount</h2>
+  <p class="sub">Tell us about your celebration — our experts will find the perfect venue.</p>
+  <form class="form-grid" id="discountForm" onsubmit="event.preventDefault();alert('Thank you! Our team will contact you shortly.');">
+    <div class="form-group"><label>Name*</label><input required name="name" type="text"></div>
+    <div class="form-group"><label>Last Name</label><input name="lastname" type="text"></div>
+    <div class="form-group full"><label>Email*</label><input required name="email" type="email"></div>
+    <div class="form-group full"><label>Phone*</label><input required name="phone" type="tel"></div>
+    <div class="form-group full"><label>Preferred Region</label>
+      <select name="region">
+        <option value="">Select Region</option>
+        <option>North Delhi</option><option>South Delhi</option><option>East Delhi</option>
+        <option>West Delhi</option><option>Central Delhi</option>
+        <option>Noida</option><option>Gurgaon</option><option>Ghaziabad</option>
+      </select>
+    </div>
+    <div class="form-group"><label>Budget</label><input name="budget" type="text" placeholder="e.g. 5-10 Lakh"></div>
+    <div class="form-group"><label>Function Date</label><input name="date" type="date"></div>
+    <div class="form-group full"><label>No. of Guests</label><input name="guests" type="number" min="1"></div>
+    <div class="form-group full"><button class="form-submit magnetic" type="submit">Request Best Deal</button></div>
+  </form>
+</aside>
+
+<script>
+(function(){
+  'use strict';
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* ---- Touch detect ---- */
+  if('ontouchstart' in window || navigator.maxTouchPoints>0){
+    document.body.classList.add('touch-device');
+  }
+
+  /* ---- Testimonials data ---- */
+  const testimonials = [
+    {name:'Nawabuddin Azad', pos:'5 April 2017', venue:'Ocean Pearl Retreat, Chattarpur', date:'June 23, 2015', img:'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80', text:'Thank you for all your patience, grace, good judgement and incredible planning. As soon as we met you at the planning stage, you put both Rumana (my wife) and I totally at ease. We knew that you would make sure that the wedding would go smoothly. And it did. There was absolutely nothing left for'},
+    {name:'Dr. Gupta', pos:'17 Feb 2015', venue:'Bluesapphire Resort, GT Karnal Road, Delhi', date:'March 1, 2016', img:'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80', text:'I had a set budget and was unable to find good venues within my budget. I was really overwhelmed with the entire process of going to these venues, finding their party menu, and what all would fit into my budget. I finally gave up as I was very dissatisfied with the options in hand. I'},
+    {name:'Kiran Dabas', pos:'7 Mar 2016', venue:'Nitesh Kunj, NH-8', date:'March 1, 2016', img:'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80', text:'Thank you very much for all of your efforts in easing out our wedding venue hunt. Everything at the venue went seamlessly. YOU PEOPLE ARE AWESOME.'},
+    {name:'Nisha Agarawal', pos:'5 Dec 2015', venue:'Richmond Lee Castle, GT Karnal Road', date:'March 19, 2016', img:'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80', text:"I'd like to convey a very heartfelt thanks to everyone at VenueInDelhi.com. Once my wedding date was fixed, I was totally lost. After a research on the internet, I found VenueInDelhi.com. I was still unsure. Which place would make the ideal venue? What will be the costs involved? What about the flowers and photography? Read"},
+    {name:'Ravish & Sunidhi', pos:'', venue:'Elroy, The Umaro', date:'July 5, 2015', img:'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80', text:'I am getting married on the heaviest day of the season and God alone knows that I am late to book the venue. So one day I started my research at 9:30 pm (bad time to get any response) and there was the Team VenueInDelhi. I got a call from the team within 5 mins'}
+  ];
+
+  function cardHTML(t){
+    return '<article class="t-card"><div class="stars">★★★★★</div><p>"'+t.text+'"</p><div class="t-author"><img src="'+t.img+'" alt="'+t.name+'"><div><strong>'+t.name+'</strong><span>'+[t.pos,t.venue,t.date].filter(Boolean).join(' | ')+'</span></div></div></article>';
+  }
+  const row1 = document.getElementById('marquee1');
+  const row2 = document.getElementById('marquee2');
+  const doubled = testimonials.concat(testimonials).concat(testimonials);
+  row1.innerHTML = doubled.map(cardHTML).join('');
+  row2.innerHTML = doubled.slice().reverse().map(cardHTML).join('');
+
+  /* ---- Preloader ---- */
+  const bar = document.getElementById('preloadBar');
+  gsap.to(bar,{width:'100%',duration:1.4,ease:'power2.inOut',onComplete:()=>{
+    const tl = gsap.timeline({onComplete:()=>{
+      document.getElementById('preloader').style.display='none';
+      document.getElementById('curtainL').style.display='none';
+      document.getElementById('curtainR').style.display='none';
+      initSite();
+    }});
+    tl.to('#preloader',{opacity:0,duration:0.4})
+      .to('#curtainL',{xPercent:-100,duration:0.9,ease:'power3.inOut'},'-=0.1')
+      .to('#curtainR',{xPercent:100,duration:0.9,ease:'power3.inOut'},'<')
+      .from('.hero-brand .left-word, .hero-brand .right-word',{y:60,opacity:0,duration:1,stagger:0.12,ease:'power3.out'},'-=0.4')
+      .from('.hero-sub',{y:30,opacity:0,duration:0.8},'-=0.5')
+      .from('#filterDock',{y:40,opacity:0,duration:0.8},'-=0.5');
+  }});
+
+  function initSite(){
+    /* ---- Lenis ---- */
+    const lenis = new Lenis({
+      duration:1.2,
+      easing:(t)=>Math.min(1,1.001-Math.pow(2,-10*t)),
+      smoothWheel:true
+    });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time)=>{ lenis.raf(time*1000); });
+    gsap.ticker.lagSmoothing(0);
+
+    /* ---- Cursor ---- */
+    const cursor = document.getElementById('cursor');
+    const dot = document.getElementById('cursorDot');
+    let mx=0,my=0,cx=0,cy=0;
+    if(!document.body.classList.contains('touch-device')){
+      gsap.set([cursor,dot],{xPercent:-50,yPercent:-50});
+      window.addEventListener('mousemove',(e)=>{
+        mx=e.clientX; my=e.clientY;
+        gsap.to(dot,{x:mx,y:my,duration:0.12,overwrite:'auto'});
+      });
+      gsap.ticker.add(()=>{
+        cx += (mx-cx)*0.18;
+        cy += (my-cy)*0.18;
+        gsap.set(cursor,{x:cx,y:cy});
+      });
+      document.querySelectorAll('a,button,.magnetic,.area-card,.allied-card,.t-card,.seo-tab').forEach(el=>{
+        el.addEventListener('mouseenter',()=>{
+          cursor.classList.add('hover');
+          dot.classList.add('hover');
+          gsap.to(cursor,{scale:1.55,duration:0.35,overwrite:'auto'});
+          gsap.to(dot,{scale:1.6,duration:0.3,overwrite:'auto'});
+        });
+        el.addEventListener('mouseleave',()=>{
+          cursor.classList.remove('hover');
+          dot.classList.remove('hover');
+          gsap.to(cursor,{scale:1,duration:0.35,overwrite:'auto'});
+          gsap.to(dot,{scale:1,duration:0.3,overwrite:'auto'});
+        });
+      });
+    }
+
+    /* ---- Mobile nav ---- */
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+    toggle.addEventListener('click',()=> nav.classList.toggle('open'));
+    nav.querySelectorAll('.nav-item').forEach(item=>{
+      const link = item.querySelector('.nav-link');
+      if(item.querySelector('.mega')){
+        link.addEventListener('click',(e)=>{
+          if(window.innerWidth<=980){
+            e.preventDefault();
+            item.classList.toggle('open');
+          }
+        });
+      }
+    });
+
+    /* ---- Hero pin scrub ---- */
+    const mm = gsap.matchMedia();
+    mm.add('(min-width: 981px)',()=>{
+      const mask = document.getElementById('heroMask');
+      const maskSize = ()=>({
+        w: Math.min(window.innerWidth * 0.68, 920),
+        h: Math.min(window.innerHeight * 0.58, 520)
+      });
+      const applyRest = ()=>{
+        const {w,h} = maskSize();
+        gsap.set(mask,{
+          width:w, height:h,
+          borderRadius:'50% 50%',
+          clipPath:'ellipse(50% 48% at 50% 50%)',
+          top:'46%', xPercent:-50, yPercent:-50, left:'50%',
+          boxShadow:'0 0 0 3px #D4AF37, 0 0 0 10px rgba(74,8,18,0.65), 0 30px 70px rgba(0,0,0,0.5)'
+        });
+      };
+      applyRest();
+      const tl = gsap.timeline({
+        scrollTrigger:{
+          trigger:'#heroPin',
+          start:'top top',
+          end:'bottom bottom',
+          scrub:1.1,
+          invalidateOnRefresh:true,
+          onUpdate:(self)=>{
+            const dock = document.getElementById('filterDock');
+            if(self.progress>0.55) dock.classList.add('floating');
+            else dock.classList.remove('floating');
+            mask.classList.toggle('is-expanding', self.progress>0.35);
+            const hint = document.getElementById('scrollHint');
+            if(hint) hint.style.opacity = Math.max(0, 0.85 - self.progress*3);
+          }
+        }
+      });
+      tl.fromTo(mask,{
+        width:()=> maskSize().w,
+        height:()=> maskSize().h,
+        borderRadius:'50% 50%',
+        clipPath:'ellipse(50% 48% at 50% 50%)'
+      },{
+        width:()=> window.innerWidth,
+        height:()=> window.innerHeight,
+        borderRadius:'0% 0%',
+        clipPath:'ellipse(80% 80% at 50% 50%)',
+        top:'50%',
+        boxShadow:'0 0 0 0px transparent',
+        ease:'none'
+      },0)
+      .to('#heroLeft',{xPercent:-28,ease:'none'},0)
+      .to('#heroRight',{xPercent:28,ease:'none'},0)
+      .to('.hero-sub',{opacity:0,y:-30,ease:'none'},0)
+      .to('.hero-patterns',{opacity:0.2,ease:'none'},0)
+      .to('#filterDock',{y:12,ease:'none'},0.35);
+    });
+
+    mm.add('(max-width: 980px)',()=>{
+      gsap.set('#heroMask',{
+        width:()=> Math.min(window.innerWidth * 0.88, 520),
+        height:()=> Math.min(window.innerHeight * 0.42, 360),
+        borderRadius:'50% 50%',
+        clipPath:'ellipse(50% 48% at 50% 50%)',
+        left:'50%', top:'46%', xPercent:-50, yPercent:-50
+      });
+    });
+
+    /* ---- Depth stack scroll carousel ---- */
+    (function initDepthStack(){
+      const cards = gsap.utils.toArray('#areasTrack .area-card');
+      const n = cards.length;
+      if(!n) return;
+      const counter = document.getElementById('stackCurrent');
+      const bar = document.getElementById('stackBarFill');
+
+      gsap.set(cards, { yPercent: -50, top: '50%', left: 0, x: 0 });
+      const place = (progress)=>{
+        const raw = progress * (n - 1);
+        const active = Math.round(raw);
+        cards.forEach((card, i)=>{
+          const d = i - raw;
+          let y, z, scale, rotX, opacity, blur, zIndex;
+          if(d < -0.02){
+            const t = gsap.utils.clamp(0, 1, -d);
+            y = -t * 160;
+            z = 100 + t * 140;
+            scale = 1 + t * 0.06;
+            rotX = -t * 32;
+            opacity = 1 - t * 1.15;
+            blur = t * 8;
+            zIndex = 200 + i;
+          } else {
+            const depth = gsap.utils.clamp(0, 5, d);
+            y = depth * 22;
+            z = -depth * 110;
+            scale = 1 - depth * 0.075;
+            rotX = depth * 5;
+            opacity = depth > 4.2 ? 0 : 1 - depth * 0.1;
+            blur = depth > 2.5 ? (depth - 2.5) * 2.5 : 0;
+            zIndex = 100 - Math.round(depth * 8);
+          }
+          card.classList.toggle('is-active', i === active);
+          gsap.set(card, {
+            y, z, scale, rotationX: rotX,
+            yPercent: -50,
+            opacity: Math.max(0, Math.min(1, opacity)),
+            filter: blur > 0.15 ? 'blur('+blur.toFixed(1)+'px)' : 'blur(0px)',
+            zIndex,
+            force3D: true,
+            transformPerspective: 1200
+          });
+        });
+        if(counter) counter.textContent = String(active + 1).padStart(2, '0');
+        if(bar) gsap.set(bar, { width: (progress * 100) + '%' });
+      };
+
+      place(0);
+      ScrollTrigger.create({
+        trigger: '.areas-stack-pin',
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: 0.65,
+        onUpdate: (self) => place(self.progress)
+      });
+    })();
+
+    /* ---- Allied batch + spotlight ---- */
+    gsap.from('.allied-card',{
+      scrollTrigger:{ trigger:'#alliedGrid', start:'top 80%' },
+      opacity:0, y:60, rotateX:25, stagger:{each:0.06, from:'start'},
+      duration:0.9, ease:'power3.out', transformOrigin:'center bottom'
+    });
+    document.querySelectorAll('.allied-card').forEach(card=>{
+      card.addEventListener('mousemove',(e)=>{
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX-r.left)+'px');
+        card.style.setProperty('--my', (e.clientY-r.top)+'px');
+      });
+    });
+
+    /* ---- Counters ---- */
+    document.querySelectorAll('.stat-num').forEach(el=>{
+      const target = +el.dataset.count;
+      const suffix = el.dataset.suffix || (target>=100?'+':'+');
+      ScrollTrigger.create({
+        trigger:el,
+        start:'top 85%',
+        once:true,
+        onEnter:()=>{
+          const obj={v:0};
+          gsap.to(obj,{v:target,duration:2,ease:'power2.out',onUpdate:()=>{
+            el.textContent = Math.round(obj.v) + suffix;
+          }});
+        }
+      });
+    });
+
+    /* ---- Prop stacking scrub ---- */
+    document.querySelectorAll('.prop-card').forEach((card,i,arr)=>{
+      if(i===arr.length-1) return;
+      gsap.to(card,{
+        scale:0.94 - i*0.01,
+        boxShadow:'0 4px 20px rgba(74,8,18,0.06)',
+        scrollTrigger:{
+          trigger: arr[i+1],
+          start:'top 80%',
+          end:'top 40%',
+          scrub:true
+        }
+      });
+    });
+
+    /* ---- Spotlight clip wipes ---- */
+    document.querySelectorAll('[data-spotlight]').forEach(sec=>{
+      const vis = sec.querySelector('.spot-visual');
+      gsap.fromTo(vis,
+        {clipPath:'inset(0 100% 0 0)'},
+        {clipPath:'inset(0 0% 0 0)', ease:'none',
+          scrollTrigger:{ trigger:sec, start:'top 75%', end:'top 25%', scrub:1 }
+        }
+      );
+      gsap.from(sec.querySelectorAll('.spot-copy > *'),{
+        y:40, opacity:0, stagger:0.08, duration:0.8,
+        scrollTrigger:{ trigger:sec, start:'top 60%' }
+      });
+    });
+
+    /* ---- Velocity marquee ---- */
+    let base1=0, base2=0, speed=0.4, velBoost=0;
+    let lastScroll = lenis.scroll || 0;
+    lenis.on('scroll',({scroll,velocity})=>{
+      velBoost = Math.min(Math.abs(velocity||0)*0.08, 2.5);
+      lastScroll = scroll;
+    });
+    let paused=false;
+    document.getElementById('marqueeWrap').addEventListener('mouseenter',()=> paused=true);
+    document.getElementById('marqueeWrap').addEventListener('mouseleave',()=> paused=false);
+    gsap.ticker.add(()=>{
+      if(paused) return;
+      const s = speed + velBoost;
+      base1 -= s;
+      base2 += s*0.7;
+      const w1 = row1.scrollWidth/3;
+      const w2 = row2.scrollWidth/3;
+      if(Math.abs(base1)>w1) base1=0;
+      if(Math.abs(base2)>w2) base2=0;
+      gsap.set(row1,{x:base1});
+      gsap.set(row2,{x:-base2});
+      velBoost *= 0.95;
+    });
+
+    /* ---- SEO tabs ---- */
+    document.querySelectorAll('.seo-tab').forEach(tab=>{
+      tab.addEventListener('click',()=>{
+        document.querySelectorAll('.seo-tab').forEach(t=>t.classList.remove('active'));
+        document.querySelectorAll('.seo-panel').forEach(p=>p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('panel-'+tab.dataset.panel).classList.add('active');
+      });
+    });
+
+    /* ---- Drawer ---- */
+    const drawer = document.getElementById('drawer');
+    const overlay = document.getElementById('drawerOverlay');
+    function openD(){ drawer.classList.add('open'); overlay.classList.add('open'); drawer.setAttribute('aria-hidden','false'); }
+    function closeD(){ drawer.classList.remove('open'); overlay.classList.remove('open'); drawer.setAttribute('aria-hidden','true'); }
+    document.getElementById('openDrawer').addEventListener('click', openD);
+    document.getElementById('closeDrawer').addEventListener('click', closeD);
+    overlay.addEventListener('click', closeD);
+
+    ScrollTrigger.refresh();
+  }
+})();
+</script>
+</body>
+</html>
